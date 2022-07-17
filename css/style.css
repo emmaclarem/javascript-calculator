@@ -1,0 +1,124 @@
+/* ========== GLOBAL STYLES ========== */
+
+:root {
+  --main-color: rgba(242, 244, 245, 0.8);
+  --accent-color-1: #005de7;
+  --accent-color-2: #f910de;
+  --dark-color: #3a354d;
+  --active-color: #fff;
+  --shadow: -5px -5px 10px #fff,
+        5px 5px 10px rgba(20, 2, 40, 0.4);
+  --shadow-inset: inset -5px -5px 10px #fff, inset
+        5px 5px 10px rgba(20, 2, 40, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  outline: none;
+}
+
+body {
+  background: linear-gradient(68.6deg, rgb(252, 165, 241) 1.8%, rgb(181, 255, 255) 100.5%);
+}
+
+
+/* ========== LAYOUT STYLES ========== */
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  width: min(300px, 90%);
+  padding: 1.5rem;
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px rgba(20, 2, 40, 0.4);
+  background-color: var(--main-color);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(100px, auto) repeat(5, 1fr);
+  gap: 0.75rem;
+}
+
+
+/* ========== OUTPUT SECTION STYLES ========== */
+
+.output {
+  grid-column: span 4;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  word-wrap: break-word;
+  word-break: break-all;
+  border: none;
+  border-radius: 20px;
+  text-shadow: -1px -1px 2px #f5edfe, 1px 1px 2px rgba(20, 2, 40, 0.2);
+  box-shadow: var(--shadow-inset);
+  color: var(--dark-color);
+}
+
+.previous-operand {
+  font-size: 0.75em;
+}
+
+.current-operand {
+  font-size: 1.25em;
+}
+
+
+/* ========== BUTTON STYLES ========== */
+
+button {
+  box-shadow: var(--shadow);
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: var(--main-color);
+  transition: all 0.1s;
+  justify-self: center;
+}
+
+button:hover, button:focus, button:active {
+  background-color: var(--active-color);
+}
+
+button:active {
+  box-shadow: var(--shadow-inset);
+  transform: translate(0.7px, 0.7px);
+}
+
+.op-key {
+  color: var(--accent-color-1);
+}
+
+.num-key {
+  color: var(--dark-color);
+}
+
+.btn-wide {
+  width: 100%;
+  grid-column: span 2;
+  border-radius: 40px;
+  color: var(--accent-color-2);
+}
+
+/* this hides the text elements on the buttons because I'm using icons for the visuals */
+p { 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: rgba(242, 244, 245, 0);
+}
