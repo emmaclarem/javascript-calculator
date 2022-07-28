@@ -24,6 +24,7 @@ Some areas I'd like to work on are:
 1. Adding a Dark Mode to the calculator
 2. Re-writing all the JS code from scratch myself without guidance from a tutorial
 3. Making it mobile-responsive
+4. Accepting keyboard input
 
 ## Resources
 - [Neumorphic Calculator Build 2020 (HTML, CSS, JavaScript)](https://www.youtube.com/watch?v=n63qcjz60Co)
